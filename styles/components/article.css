@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#projects-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 240px);
+	grid-auto-rows: 240px;
+	grid-auto-flow: dense;
+}
+
+article {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.vert-rect {
+	background-color: #090428;
+	grid-column: span 1;
+	grid-row: span 2;
+}
+
+.horz-rect {
+	background-color: #6aa6a6;
+	grid-column: span 2;
+	grid-row: span 1;
+}
+
+.small-square {
+	background-color: #a65353;
+	grid-column: span 1;
+	grid-row: span 1;
+}
+
+.large-square {
+	background-color: #a65353;
+	grid-column: span 1;
+	grid-row: span 1;
+}
+
+#feature {
+	background-color: #bf7160;
+	background-image: url("../../images/um.jpg");
+	background-position: center;
+	background-size: cover;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+article h3, article h5 {
+	padding: 21px;
+	margin: 0;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: #f2f2f2;
+}

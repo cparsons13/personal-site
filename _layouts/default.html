@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-uk">
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="https://use.typekit.net/nip4cfc.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/styles/common.css">
+	</head>
+
+	<body>
+		<header>
+			{% include header.html %}
+		</header>
+		
+		<main>
+			<!--{% include hero.html %}-->
+			{{content}}
+		</main>
+		
+		<footer>
+			
+		</footer>
+		
+		<script>
+			var hero = document.getElementById("hero");
+			hero.style.backgroundImage = "url('images/hero-projects.jpg')";
+			
+			function random_item(items)
+			{
+
+			return items[Math.floor(Math.random()*items.length)];
+
+			}
+			
+			var articleShape = ["vert-rect", "small-square", "horz-rect", "large-square"];
+			var article = document.querySelectorAll("article");
+			
+			for (i=0;i<article.length;i++){
+				article[i].className = random_item(articleShape);
+			}
+		</script>
+	</body>
+</html>
