@@ -12,6 +12,7 @@ article {
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: space-between;
+	transition: 1.3s;
 }
 
 .vert-rect {
@@ -48,4 +49,8 @@ article h3, article h5 {
 	margin: 0;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: #f2f2f2;
+}
+
+article:hover {
+	background-size:
 }
