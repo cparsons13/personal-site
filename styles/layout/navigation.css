@@ -29,7 +29,9 @@ nav ul {
 }
 
 #subject {
-	width: 480px;
+	width: 720px;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	padding-left: 0;
 }
@@ -41,13 +43,18 @@ nav ul {
 
 nav ul li a {
 	font-size: 21px;
+}
+
+ul li a {
 	color: inherit;
 	text-decoration: none;
 }
 
-nav ul li a.current {
+ul li a.current {
 	color: #b21555;
 }
+
+
 
 a:hover {
 	color: #b21555;
@@ -64,4 +71,15 @@ a:hover {
 	display: flex;
 	justify-content: space-between;
 	width: 1200px;
+}
+@media only screen and (min-width : 481px) and (max-width : 719px) {
+	#subject {
+		width: 480px;
+	}
+}
+
+@media only screen and (min-width : 285px) and (max-width : 480px) {
+	#subject {
+		width: 240px;
+	}
 }

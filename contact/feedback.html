@@ -1,0 +1,54 @@
+---
+layout: contact
+title: "Contact"
+fulltitle: "Contact Page"
+mainnav: "false"
+hero: hero-contact.jpg
+order: 4
+subtitle: "Feedback"
+contactnav: "true"
+suborder: 2
+---
+
+<form class="form-style-4" action="" method="post">
+	<p class="form-style-4-heading">
+		Provide your information
+	</p>
+	<label for="field1">
+		<span>
+			Enter Your Name
+		</span>
+		<input type="text" name="field1" required="true" autofocus/>
+	</label>
+	<label for="field2">
+		<span>
+			Email Address
+		</span>
+		<input type="email" name="field2" required="true" />
+	</label>
+	<label for="field3">
+		<span>
+			Short Subject
+		</span>
+		<input type="text" name="field3" required="true" />
+	</label>
+	<label for="field4">
+		<span>
+			Message to Us
+		</span>
+		<textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
+	</label>
+	<label>
+		<span> 
+		</span>
+		<input type="submit" value="Submit" />
+	</label>
+</form>
+
+<script type="text/javascript">
+	//auto expand textarea
+	function adjust_textarea(h) {
+		h.style.height = "20px";
+		h.style.height = (h.scrollHeight)+"px";
+	}
+</script>

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+
+<section id="minor-nav">
+	<div class="nav-container">
+		<ul id="subject">
+			{% assign sorted_pages = site.pages | sort:"suborder" %}
+			{% for node in sorted_pages %}
+				{% if node.projectnav == "true" %}
+					<li>
+						<a class="{% if page.url == node.url%}current{% endif %}" href="{{node.url}}">
+							{{node.subtitle}}
+						</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+			
+			<!--<li>
+				Software Developement
+			</li>
+			<li>
+				Design
+			</li>
+			<li>
+				All
+			</li>-->
+		</ul>
+	</div>
+</section>
+
+{{content}}

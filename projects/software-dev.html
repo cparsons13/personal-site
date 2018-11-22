@@ -1,0 +1,31 @@
+---
+layout: projects
+title: "Projects"
+mainnav: "false"
+fulltitle: "Project Page"
+hero: hero-projects.jpg
+order: 2
+subtitle: "Software Development"
+projectnav: "true"
+suborder: 1
+---
+
+<section id="projects-container">
+	{% for project in site.projects %}
+		{% if project.category == "softdev" %}
+			<article class="vert-rect" id="{% if project.feature == true %}feature{% endif %}">
+				<div class="article-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
+					<div class="article-container">
+						<h3>
+							{{project.title}}
+						</h3>
+
+						<h6>
+							<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
+						</h6>
+					</div>
+				</div>
+			</article>
+		{% endif %}
+	{% endfor %}
+</section>

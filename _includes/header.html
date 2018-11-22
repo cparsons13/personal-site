@@ -2,11 +2,13 @@
 	<ul>
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
-			<li>
-				<a class="{% if page.url == node.url%}current{% endif %}" href="{{node.url}}">
-					{{node.title}}
-				</a>
-			</li>
+			{% if node.mainnav == "true" %}
+				<li>
+					<a class="{% if page.url contains node.url%}current{% endif %}" href="{{node.url}}">
+						{{node.title}}
+					</a>
+				</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 </nav>

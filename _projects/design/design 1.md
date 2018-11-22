@@ -4,7 +4,7 @@ title: "Concept art for a video game set in East Asia."
 cta: "> See the design process"
 feature: true
 main-image: um.jpg
-category: projects-design-case-study
+category: design
 ---
 ##Introduction
 I didn't actually make this myself, I just needed stuff I could use to flesh out the website so here is some placeholder text but this is where the intro would go
