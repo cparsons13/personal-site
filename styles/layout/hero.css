@@ -9,26 +9,6 @@
 	background-size: cover;
 }
 
-#hero-index {
-	background-image: url("/images/hero-images/hero-index.jpg");
-}
-
-#hero-projects {
-	background-image: url("/images/hero-images/hero-projects.jpg");
-}
-
-#hero-cv {
-	background-image: url("/images/hero-images/hero-cv.jpg");
-}
-
-#hero-contact {
-	background-image: url("/images/hero-images/hero-contact.jpg");
-}
-
-#hero-blog {
-	background-image: url("/images/hero-images/hero-blog.jpg");
-}
-
 #hero-content {
 	margin: 0 auto;
 	width: 100%;
@@ -40,11 +20,38 @@
 	background: radial-gradient(rgba(0,0,0,.21), rgba(0,0,0,.5));
 }
 
-#hero-content h1 {
+#hero-content-project {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	padding-top: 210px;
+	text-align: center;
+	color: #f2f2f2;
+	-webkit-background: radial-gradient(rgba(0,0,0,.21), rgba(0,0,0,.5));
+	background: radial-gradient(rgba(0,0,0,.21), rgba(0,0,0,.5));
+}
+
+#hero-text {
+	width: 81%;
+	margin: 0 auto;
+}
+
+#hero-text h1 {
 	border-bottom: 7px solid #b21555;
 }
 
-#hero-content h4 {
+#hero-text h4 {
 	padding-top: 13px;
 	text-shadow: 5px 5px 7px #0d071b;
+}
+
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+	#hero-text h1 {
+		font-size: 75px;
+	}
+
+	#hero-text h4 {
+		padding-top: 13px;
+		text-shadow: 5px 5px 7px #0d071b;
+	}
 }
