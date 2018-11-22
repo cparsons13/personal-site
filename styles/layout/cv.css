@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	width: 100%;
+}
+.cv {
+	margin-left: auto;
+	margin-right: auto;
+	width: 92%;
+	max-width: 960px;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+}
+
+.header-content {
+	display: block;
+	margin: 21px;
+	padding: 21px;
+	color: #0d071b;
+}
+
+.header-content .profile-photo {
+	background-color: rgba(237,237,237,1.00);
+	background-image: url("/images/CV/me.jpg");
+	background-size: cover;
+	width: 259px;
+	border-radius: 50%;
+	height: 259px;
+}
+.header-content .profile-header h1 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 24px;
+}
+.header-content .profile-header h3 {
+	color: #b28b9b;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+hr {
+	color: #b21555;
+	height: 5px;
+	background: #b21555;
+	border-style: solid;
+}
+
+.header-content .profile-header p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8;
+	overflow-y: auto;
+}
+
+/* Main Content sections */
+.experience .section-title {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.experience .section-title-rule {
+	margin: 0 3% 0 0;
+}
+
+.experience .section-content-title {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.experience .section-content-sub-title {
+	color: #b28b9b;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.experience .section-content {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+
+.experience ul {
+	margin-top: -21px;
+}
+
+.main-content {
+	display: block;
+	margin: 21px;
+	padding: 21px;
+}
+
+/* Media query for Mobile devices*/
+@media only screen and (min-width : 285px) and (max-width : 480px) {
+	.header-content {
+		display: block;
+		margin: 21px;
+		padding: 21px;
+	}
+	
+	.header-content .profile-photo {
+		display: block;
+		width: 130px;
+		height: 130px;
+		margin: 0 auto;
+	}
+	
+	.header-content .profile-header {
+		text-align: center;
+		margin-top: 10%;
+	}
+	
+	.header-content .profile-header p {
+		text-align: justify;
+	}
+
+	/* Main content sections */
+	.experience .section-title {
+		text-align: center;
+	}
+	
+	.experience .section-title-rule {
+		width: 100%;
+	}
+	
+	.main-content .experience {
+		display: block;
+		text-align: center;
+	}
+	
+	.experience .experience-content {
+		margin-top: 10%;
+		text-align: justify;
+		margin-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+	.header-content {
+		width: 100%;
+	}
+	
+	.header-content .profile-photo {
+		width: 130px;
+		height: 130px;
+		margin-right: 3%;
+		margin-top: 5%;
+	}
+	
+	.header-content .profile-header {
+		text-align: left;
+		padding: 0px;
+		margin-left: 20%;
+		margin-right: 7%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	/* Main content and sections */
+	.experience .section-title {
+		text-align: center;
+	}
+	
+	.experience .section-title-rule {
+		width: 100%;
+	}
+	
+	.experience .experience-content {
+		padding: 0px;
+		margin-left: 20%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
+
+@media only screen and (min-width:1025px) {
+/* Main content sections */
+	.header-content .profile-photo {
+		float: left;
+		margin-right: 3%;
+	}
+	
+	.header-content .profile-header {
+		text-align: left;
+		padding-top: 10%;
+	}
+	
+	.experience .section-title-rule {
+		width: 22.5%;
+	}
+	
+	.experience .experience-content {
+		padding: 0px;
+		margin-left: 26%;
+	}
+}

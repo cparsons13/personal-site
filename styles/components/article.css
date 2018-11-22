@@ -52,5 +52,5 @@ article h3, article h5 {
 }
 
 article:hover {
-	background-size:
+	background-position: left;
 }

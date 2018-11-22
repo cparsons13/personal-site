@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#container {
+	min-height: 100%;
+}
+
+main {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+
+
+footer {
+	position: relative;
+	height: 21px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	position: relative;
+	width: 100%;
+	padding: 21px;
+	margin-bottom: 21px;
+	display: block;
+}
+
+
+footer .footerDisclaimer {
+	font-size: 14px;
+	line-height: 18px;
+	color: #0d071b;
+	font-weight: 700;
+}
+footer .footerDisclaimer span {
+	color: #b28b9b;
+	font-weight: 400;
+}
+footer .footerNote {
+	font-size: 14px;
+	line-height: 18px;
+	color: #0d071b;
+	font-weight: 700;
+}
+footer .footerNote span {
+	color: #b28b9b;
+	font-weight: 400;
+}
+
+
+
+
+
+/* Media query for Mobile devices*/
+@media only screen and (min-width : 285px) and (max-width : 480px) {
+footer {
+	text-align: center;
+}
+}
+
+
+
+/* Media Query for Tablets */
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+footer .footerDisclaimer {
+	margin-left: 3%;
+	float: left;
+}
+footer .footerNote {
+	margin-right: 3%;
+	float: right;
+}
+}
+
+
+
+
+/* Desktops and laptops  */
+@media only screen and (min-width:1025px) {
+footer .footerDisclaimer {
+	margin-left: 3%;
+	float: left;
+}
+footer .footerNote {
+	margin-right: 3%;
+	float: right;
+}
+}
