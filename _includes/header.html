@@ -2,9 +2,15 @@
 	<ul>
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
+			{% assign class = nil %}
+			{% if page.url == node.url %}
+				{% assign class = 'current' %}
+			{% elsif node.url != '/' and page.url contains node.url %}
+				{% assign class = 'current parent' %}
+			{% endif %}
 			{% if node.mainnav == "true" %}
 				<li>
-					<a class="{% if page.url contains node.url%}current{% endif %}" href="{{node.url}}">
+					<a class="{{class}}" href="{{node.url}}">
 						{{node.title}}
 					</a>
 				</li>
