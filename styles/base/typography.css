@@ -7,7 +7,8 @@ html * {
 
 h1 {
 	font-weight: 700;
-	font-size: 130px;
+	font-size: 57px;
+	letter-spacing: .21em;
 }
 
 h2 {

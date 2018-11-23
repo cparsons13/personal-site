@@ -13,11 +13,22 @@
 		</header>
 		
 		<main>
-			{% include post-hero.html %}
 			
-			<section id="project-content">
-				{{content}}
-			</section>
+			<div id="project-post">
+				<section id="intro" class="container">
+					<h1 id="project-title">
+						{{page.title}}
+					</h1>
+				</section>
+				<section id="byline" class="container">
+					<p id="meta">
+						{{page.date | date: "%d/%m/%Y"}}
+					</p>
+				</section>
+				<section id="project-content" class="container">
+					{{content}}
+				</section>
+			</div>
 			
 			<footer>
 				{% include footer.html %}

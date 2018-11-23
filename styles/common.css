@@ -8,7 +8,8 @@
 @import url("components/article.css");
 
 @import url("layout/header.css");
-@import url("layout/navigation.css");
+@import url("layout/primary-navigation.css");
+@import url("layout/secondary-navigation.css");
 @import url("layout/hero.css");
 @import url("layout/footer.css");
 @import url("layout/cv.css");

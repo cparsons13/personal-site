@@ -1,5 +1,13 @@
-<nav>
-	<ul>
+<nav class="navbar">
+	<span class="navbar-toggle" id="js-navbar-toggle">
+		<i class="fa fa-bars"></i>
+	</span>
+	
+	<a href="{{site.baseurl}}/index.html" class="logo">
+
+	</a>
+	
+	<ul class="main-nav" id="js-menu">
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% assign class = nil %}
@@ -10,7 +18,7 @@
 			{% endif %}
 			{% if node.mainnav == "true" %}
 				<li>
-					<a class="{{class}}" href="{{node.url}}">
+					<a class="nav-links {{class}}" href="{{node.url}}">
 						{{node.title}}
 					</a>
 				</li>

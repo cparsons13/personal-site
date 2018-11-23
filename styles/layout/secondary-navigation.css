@@ -1,31 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
 
-nav {
-	/*background-color: #fff3f8;*/
-	background-color: #f2f2f2;
-	width: 100%;
-	position: fixed;
-	z-index: 210;
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 ul {
 	display: flex;
 	padding-left: 21px;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
-li {
+#minor-nav li {
 	display: inline;
 	flex-grow: 1;
 	padding: 21px 0;
 	color: #0d071b;
 	transition: .21s;
-}
-
-nav ul {
-	min-width: 480px;
-	max-width: 480px;
-	float: right;
 }
 
 #subject {
@@ -64,14 +60,16 @@ a:hover {
 	background-color: #f2f2f2;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 63px;
+	top: 70px;
 	z-index: 130;
 }
+
 .nav-container {
 	display: flex;
 	justify-content: space-between;
 	width: 1200px;
 }
+
 @media only screen and (min-width : 481px) and (max-width : 719px) {
 	#subject {
 		width: 480px;

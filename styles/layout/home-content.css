@@ -24,6 +24,11 @@
 	color: #f2f2f2;
 }
 
+.about-me p {
+	margin-top: 21px;
+	padding-top: 21px;
+}
+
 #projects-soft-dev {
 	display: flex;
 	flex-direction: row;
@@ -52,8 +57,11 @@
 	flex-shrink: 1;
 	flex-basis: 222px;
 	margin: 13px;
-	color: #b28b9b;
+	color: #0d071b;
+	background-color: #F2F2F2;
 	text-align: left;
+	align-self: stretch;
+	padding: 21px;
 }
 
 .homepage-project {
@@ -136,16 +144,28 @@
 	color: #b28b9b;
 }
 
+#contact {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
 
 #contact-button {
 	background-color: #b21555;
 	color: #f2f2f2;
-	padding: 21px 57px;
 	border-radius: 21px;
 	transition: .21s;
+	padding: 21px;
 	text-decoration: none;
 }
 
 #contact-button:hover {
 	background-color: #b28b9b;
+}
+
+/* Media query for Mobile devices*/
+@media only screen and (min-width : 285px) and (max-width : 600px) {
+	.main-page {
+		padding: 75px 21px;
+	}
 }

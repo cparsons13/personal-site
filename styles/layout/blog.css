@@ -70,7 +70,7 @@ section .post-title {
 
 .byline {
 	grid-area: author;
-	align-self: center;
+	align-self: flex-start;
 }
 
 .meta {
