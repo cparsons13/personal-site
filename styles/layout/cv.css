@@ -4,14 +4,14 @@
 body{
 	width: 100%;
 }
-.cv {
+/*.CV {
 	margin-left: auto;
 	margin-right: auto;
 	width: 92%;
 	max-width: 960px;
 	padding-left: 2.275%;
 	padding-right: 2.275%;
-}
+}*/
 
 .header-content {
 	display: block;
@@ -175,6 +175,11 @@ hr {
 		margin-top: 5%;
 		margin-bottom: 5%;
 	}
+}
+
+.cv p {
+	margin-bottom: 21px;
+	line-height: 1.3;
 }
 
 @media only screen and (min-width:1025px) {
