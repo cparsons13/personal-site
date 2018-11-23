@@ -119,20 +119,37 @@ order: 1
 			{% else %}
 				{% assign posts = site.posts %}
 				{% for post in posts limit:3 %}
-						<section class="blog-post">
-							<div class="blog-post-text">
-								<h3>
+						<section class="blog-post hidden">
+							<section class="intro">
+								<h1 class="post-title">
 									{{post.title}}
-								</h3>
-								<p>
-									{{post.content}}
-								</p>
-							</div>
-							<h6 class="post-cta">
-								<a class="post-cta" href="{{site.baseurl}}{{post.url}}">
-									{{post.cta}}
+								</h1>
+							</section>
+							<section class="post-cta">
+								<a href="{{site.baseurl}}{{post.url}}">
+									<h6>
+										{{post.cta}}
+									</h6>
 								</a>
-							</h6>
+							</section>
+							<section class="byline">
+								<p id="meta">
+									By {{post.author}} published on {{post.date | date: "%d/%m/%Y"}}
+								</p>
+							</section>
+
+							<section class="summary">
+								<h4>
+									TL;DR Summary
+								</h4>
+								<p>
+									{{post.tldr}}
+								</p>
+							</section>
+
+							<section class="post-content">
+								{{post.content}}
+							</section>
 						</section>
 				{% endfor %}
 			{% endif %}

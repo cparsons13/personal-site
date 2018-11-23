@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-uk">
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="https://use.typekit.net/nip4cfc.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/styles/common.css">
+	</head>
+
+	<body>
+		<header>
+			{% include header.html %}
+		</header>
+		
+		<main>
+			{% include post-hero.html %}
+			
+			<div id="blog-post">
+				<section id="intro" class="container">
+					<h1 id="post-title">
+						{{page.title}}
+					</h1>
+				</section>
+				<section id="byline" class="container">
+					<p id="meta">
+						By {{page.author}} published on {{page.date | date: "%d/%m/%Y"}}
+					</p>
+				</section>
+
+				<section id="summary" class="container">
+					<h4>
+						TL;DR Summary
+					</h4>
+					<p>
+						{{page.tldr}}
+					</p>
+				</section>
+
+				<section id="post-content" class="container">
+					{{content}}
+				</section>
+			</div>
+			
+			<footer>
+				{% include footer.html %}
+			</footer>
+		</main>
+	</body>
+</html>
