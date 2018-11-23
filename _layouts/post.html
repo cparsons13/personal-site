@@ -3,29 +3,32 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Portfolio</title>
+		<!--Provides the required stylesheets-->
 		<link rel="stylesheet" href="https://use.typekit.net/nip4cfc.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/styles/common.css">
 	</head>
 
 	<body>
+		<!--define the layout using liquid placeholders to dynamically insert the content-->
 		<header>
 			{% include header.html %}
 		</header>
-		
 		<main>
-			
+			<!--container for all the post information-->
 			<div id="blog-post">
+				<!--title-->
 				<section id="intro" class="container">
 					<h1 id="post-title">
 						{{page.title}}
 					</h1>
 				</section>
+				<!--meta-->
 				<section id="byline" class="container">
 					<p id="meta">
 						By {{page.author}} published on {{page.date | date: "%d/%m/%Y"}}
 					</p>
 				</section>
-
+				<!--summary-->
 				<section id="summary" class="container">
 					<h4>
 						TL;DR Summary
@@ -34,12 +37,11 @@
 						{{page.tldr}}
 					</p>
 				</section>
-
+				<!--content-->
 				<section id="post-content" class="container">
 					{{content}}
 				</section>
 			</div>
-			
 			<footer>
 				{% include footer.html %}
 			</footer>

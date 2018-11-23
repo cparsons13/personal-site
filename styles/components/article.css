@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*Make the container holding all the projects a grid fin order to make an intruiging layout*/
 #projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 240px);
@@ -8,11 +9,13 @@
 	grid-auto-flow: dense;
 }
 
+/*Set the article to relative so the absolute positioned image uses it as the parent*/
 article {
 	position: relative;
 	overflow: hidden;
 }
 
+/*Set the image of the article*/
 .article-image {
 	height: 100%;
     width: 100%;
@@ -29,6 +32,7 @@ article {
     transition: all .5s;
 }
 
+/*translucent overlay to make the type easier to read*/
 .article-container {
 	position: relative;
 	width: 100%;
@@ -41,6 +45,7 @@ article {
 	transition: 1.3s;
 }
 
+/*change the image size*/
 article:hover .article-image, article:focus .article-image {
     width: 110%;
 	height: 110%;
@@ -51,6 +56,10 @@ article:hover .article-image, article:focus .article-image {
     transform: scale(1.1);*/
 }
 
+
+
+
+/*define the sizes the project articles can be*/
 .vert-rect {
 	background-color: #090428;
 	grid-column: span 1;
@@ -69,6 +78,7 @@ article:hover .article-image, article:focus .article-image {
 	grid-row: span 1;
 }
 
+/*A special feature project that is bigger than the rest and appears first always*/
 #feature {
 	background-color: #bf7160;
 	background-image: url("../../images/um.jpg");
@@ -80,6 +90,8 @@ article:hover .article-image, article:focus .article-image {
   	grid-row-end: span 2
 }
 
+
+/*Changing the text styling*/
 article h3, article h6 {
 	padding: 21px;
 	margin: 0;

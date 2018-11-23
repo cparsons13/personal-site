@@ -2,10 +2,11 @@
 layout: default
 ---
 
-
+<!--extends the default layout and provides a secondary navigation bar to filter through what project type you want to look at-->
 <section id="minor-nav">
 	<div class="nav-container">
 		<ul id="subject">
+			<!--sorts through the pages and displays the valid ones as a list item-->
 			{% assign sorted_pages = site.pages | sort:"suborder" %}
 			{% for node in sorted_pages %}
 				{% if node.projectnav == "true" %}
@@ -16,16 +17,6 @@ layout: default
 					</li>
 				{% endif %}
 			{% endfor %}
-			
-			<!--<li>
-				Software Developement
-			</li>
-			<li>
-				Design
-			</li>
-			<li>
-				All
-			</li>-->
 		</ul>
 	</div>
 </section>

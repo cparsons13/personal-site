@@ -11,26 +11,29 @@
 		<header>
 			{% include header.html %}
 		</header>
-		
 		<main>
+			<!--container for all the post information-->
 			<div id="project-post">
+				<!--title-->
 				<section id="intro" class="container">
 					<h1 id="project-title">
 						{{page.title}}
 					</h1>
 				</section>
-				<section id="header-img" class="container" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{page.main-image}}");>
+				<!--display image-->
+				<section id="header-img" class="container" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{page.main-image}});">
 				</section>
+				<!--meta-->
 				<section id="byline" class="container">
 					<p id="meta">
 						{{page.date | date: "%d/%m/%Y"}}
 					</p>
 				</section>
+				<!--content-->
 				<section id="project-content" class="container">
 					{{content}}
 				</section>
 			</div>
-			
 			<footer>
 				{% include footer.html %}
 			</footer>

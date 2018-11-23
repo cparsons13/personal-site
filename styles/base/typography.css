@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/* CSS Document */
+/* CSS Document 
+
+Setting the default typography calues to be used throughout the site
+*/
+
 
 html * {
 	font-family: futura-pt, sans-serif;

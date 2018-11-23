@@ -9,13 +9,18 @@ fulltitle: "Blog"
 description: "Everynow and then I'll post something"
 ---
 
+<!--Blog page containing links to all the blog posts-->
 <div class="blog-post-container">
+	<!--get the number of blog posts-->
 	{% assign psize = site.posts | size %}
+	<!--if the number of blog posts is 0, display to the user that there are no blog posts availabe to display-->
 	{% if psize == 0 %} 
 	  <p>No posts...yet.</p>
+	<!--else display the posts-->
 	{% else %}
+		<!--iterate through each post and then display them as a new section-->>
 		{% assign posts = site.posts %}
-		{% for post in posts limit:3 %}
+		{% for post in posts%}
 				<section class="blog-post hidden">
 					<section class="intro">
 						<h1 class="post-title">
@@ -23,6 +28,7 @@ description: "Everynow and then I'll post something"
 						</h1>
 					</section>
 					<section class="post-cta">
+						<!--provide a call to action to entise the user to read the post-->
 						<a href="{{site.baseurl}}{{post.url}}">
 							<h6>
 								{{post.cta}}

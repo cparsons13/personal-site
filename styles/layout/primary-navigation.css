@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+/* Primary navbar comes from https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf with some moderations */
 .navbar {
 	font-size: 18px;
 	background-color: #f2f2f2;

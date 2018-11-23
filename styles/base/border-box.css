@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/* CSS Document */
+/* CSS Document 
+
+Setting the default values and changing the box model to a border box to make sizes easier to work with
+*/
 
 html, html * {
 	box-sizing: border-box;

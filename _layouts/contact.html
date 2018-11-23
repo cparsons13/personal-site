@@ -1,16 +1,16 @@
 ---
 layout: default
 ---
-
-
+<!--extends the default layout to add an extra nav bar to switch between the type of contact form you want-->
 <section id="minor-nav">
 	<div class="nav-container">
 		<ul id="subject">
+			<!--iterates through the pages and displays the valid ones as list items-->
 			{% assign sorted_pages = site.pages | sort:"suborder" %}
 			{% for node in sorted_pages %}
 				{% if node.contactnav == "true" %}
 					<li>
-						<a class="{% if page.url == node.url%}current{% endif %}" href="{{node.url}}">
+						<a class="{% if page.url == node.url%}current{% endif %}" href="{{site.baseurl}}{{node.url}}">
 							{{node.subtitle}}
 						</a>
 					</li>

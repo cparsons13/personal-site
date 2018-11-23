@@ -3,12 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Portfolio</title>
+		
+		<!--import required stylesheets-->
 		<link rel="stylesheet" href="https://use.typekit.net/nip4cfc.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/styles/common.css">
 	</head>
 
 	<body>
+		<!--input the page elements using liquid/jekyll-->
 		<main>
 			<header>
 				{% include header.html %}
@@ -21,13 +24,14 @@
 		</main>
 		
 		<script>
-			function random_item(items)
-			{
-
-			return items[Math.floor(Math.random()*items.length)];
-
+			//function that returns a random item in a list
+			function random_item(items){
+				return items[Math.floor(Math.random()*items.length)];
 			}
 			
+			
+			//function to togle the menu when hidden due to size
+			//comes from https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf with some moderations
 			let mainNav = document.getElementById("js-menu");
 			let navBarToggle = document.getElementById("js-navbar-toggle");
 
@@ -35,6 +39,10 @@
 				mainNav.classList.toggle("active");
 			});
 			
+			
+			
+			//function that shuffles the order of elements in the DOM stacking order in order to make the projects appear in a random order
+			//comes from https://j11y.io/javascript/shuffling-the-dom/
 			function shuffle(elems) {
 				
 				allElems = (function(){
@@ -61,14 +69,19 @@
 			}
  
  
-			// Usage:
-			var articleShape = ["vert-rect", "small-square", "horz-rect", "large-square"];
+			//define a list of the various tile sizes
+			var articleShape = ["vert-rect", "small-square", "horz-rect"y];
+			//get a list of all the articles in the page
 			var article = document.querySelectorAll("article");
 			
+			//iterate through the list of articles
 			for (i=0;i<article.length;i++){
+				//give each index a random size from the list
 				article[i].className = random_item(articleShape);
 			}
 			
+			
+			//call the shuffle function
 			shuffle(article);
 		</script>
 	</body>
