@@ -41,7 +41,7 @@
 	height: 40px;
 	width: 50px;
 	margin-left: 21px;
-	background-image: url("/images/logo/Asset 1.svg");
+	background-image: url("/images/logo/logo.svg");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -62,7 +62,7 @@
 }
 
 .logo:hover {
-	background-image: url("/images/logo/Asset 1 hover.svg");
+	background-image: url("/images/logo/logo-hover.svg");
 }
 
 .nav-links:hover,
