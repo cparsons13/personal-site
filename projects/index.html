@@ -10,10 +10,12 @@ projectnav: "true"
 suborder: 3
 ---
 
+{% assign sorted_projects = site.projects | sort:"order" %}
 <section id="projects-container">
 	{% for project in site.projects %}
-	<article class="vert-rect" id="{% if project.feature == true %}feature{% endif %}">
-		<div class="article-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
+		<article class="vert-rect" id="{% if project.feature == true %}feature{% endif %}">
+			<div class="article-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
+			</div>
 			<div class="article-container">
 				<h3>
 					{{project.title}}
@@ -23,7 +25,6 @@ suborder: 3
 					<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
 				</h6>
 			</div>
-		</div>
-	</article>
+		</article>
 	{% endfor %}
 </section>

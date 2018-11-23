@@ -15,15 +15,15 @@ suborder: 1
 		{% if project.category == "softdev" %}
 			<article class="vert-rect" id="{% if project.feature == true %}feature{% endif %}">
 				<div class="article-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
-					<div class="article-container">
-						<h3>
-							{{project.title}}
-						</h3>
+				</div>
+				<div class="article-container">
+					<h3>
+						{{project.title}}
+					</h3>
 
-						<h6>
-							<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
-						</h6>
-					</div>
+					<h6>
+						<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
+					</h6>
 				</div>
 			</article>
 		{% endif %}

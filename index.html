@@ -6,5 +6,136 @@ mainnav: "true"
 hero: hero-index.jpg
 order: 1
 ---
+<div id="home-content">
+	<section id="about-me" class="main-page">
+		<h2>
+			ABOUT ME
+		</h2>
+		<p>
+			Heya my name is Calum, I'm 18 years old, and from the UK. I love to play volleyball, dance, and generally I'm passionate about anything creative. Also I'm really keen on on anything that involves problem solving, such as riddles and different kinds of puzzles. This is why I really enjoy software developement and just general programming, as it allows me to combine both my love of porblem solving and creating things, by creating new pieces of software by solving problems. Oh and I forgot to mention, if there is one thing I love more in the world, it is food. 
+		</p>
+	</section>
 
-<p></p>
+	<section id="recent-projects" class="main-page">
+		<h2>
+			RECENT PROJECTS
+		</h2>
+		<div id="projects-soft-dev">
+			<h4 class="project-category-tag">
+				Software Developement
+			</h4>
+			{% assign softdev_projects = site.projects | where: "category", "softdev" %}
+			{% for project in softdev_projects limit:3 %}
+					<section class="homepage-project">
+						<div class="project-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
+							<div class="project-text-container">
+								<h3>
+									{{project.title}}
+								</h3>
+
+								<h6>
+									<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
+								</h6>
+							</div>
+						</div>
+					</section>
+			{% endfor %}
+		</div>
+		
+		<div id="projects-design">
+			<h4 class="project-category-tag">
+				Design
+			</h4>
+			{% assign softdev_projects = site.projects | where: "category", "design" %}
+			{% for project in softdev_projects limit:3 %}
+					<section class="homepage-project">
+						<div class="project-image" style="background-image: url('{{site.baseurl}}/images/project-images/main-images/{{project.main-image}}');">
+							<div class="project-text-container">
+								<h3>
+									{{project.title}}
+								</h3>
+
+								<h6>
+									<a href="{{site.baseurl}}{{project.url}}">{{project.cta}}</a>
+								</h6>
+							</div>
+						</div>
+					</section>
+			{% endfor %}
+		</div>
+		<h4>
+			<a id="all-projects-link" href="{{site.baseurl}}/projects/index">
+				See all projects
+			</a>
+		</h4>
+	</section>
+
+	<section id="cv" class="main-page">
+		<h2>
+			CV
+		</h2>
+		<div id="cv-container">
+			<section class="CV">
+				<div class="header-content">
+					<div class="profile-photo">
+
+					</div>
+
+					<!-- Identity details -->
+					<section class="profile-header">
+						<h1>
+							Calum Parsons
+						</h1>
+						<h3>
+							Software Developer, Graphic Designer, and Artist
+						</h3>
+						<hr>
+						<p>
+							I am a University student currently studying at Dundee University seeking a part time job to help me get the professional skills I will need, so that after I finish my education, I can start down the path to my career goals. During the past few years, I have been able to grow my ability to get along well with others after becoming a regular setter for a regional volleyball team. This, mixed with regular dance training and the demanding nature of my subjects at school, has also helped me learn to work under pressure, especially by balancing all the aspects of my life well. I'm looking for a good starter job that can get me used to a more professional work environment whilst also being enjoyable. 
+						</p>
+					</section>
+				</div>
+			</section>
+		</div>
+		<h4>
+			<a id="full-cv-link" href="{{site.baseurl}}/cv.html">
+				See full CV
+			</a>
+		</h4>
+	</section>
+
+	<section id="contact" class="main-page">
+		<a id="contact-button" href="{{site.baseurl}}/contact/index.html">Hire me</a>
+	</section>
+
+	<section id="blogs" class="main-page">
+		<h2>
+			RECENT BLOG POSTS
+		</h2>
+		<div class="blog-post-container">
+			{% assign psize = site.posts | size %}
+			{% if psize == 0 %} 
+			  <p>No posts...yet.</p>
+			{% else %}
+				{% assign posts = site.posts %}
+				{% for post in posts limit:3 %}
+						<section class="blog-post">
+							<div class="blog-post-text">
+								<h3>
+									{{post.title}}
+								</h3>
+								<p>
+									{{post.content}}
+								</p>
+							</div>
+							<h6 class="post-cta">
+								<a class="post-cta" href="{{site.baseurl}}{{post.url}}">
+									{{post.cta}}
+								</a>
+							</h6>
+						</section>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</section>
+</div>

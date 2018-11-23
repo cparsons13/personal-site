@@ -2,7 +2,7 @@
 layout: project
 title: "Concept art for a video game set in East Asia."
 cta: "> See the design process"
-feature: true
+feature: false
 main-image: um.jpg
 category: design
 ---

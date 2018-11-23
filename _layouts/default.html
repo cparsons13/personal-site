@@ -28,12 +28,41 @@
 
 			}
 			
+			function shuffle(elems) {
+ 
+				allElems = (function(){
+				var ret = [], l = elems.length;
+				while (l--) { ret[ret.length] = elems[l]; }
+				return ret;
+				})();
+
+				var shuffled = (function(){
+					var l = allElems.length, ret = [];
+					while (l--) {
+						var random = Math.floor(Math.random() * allElems.length),
+							randEl = allElems[random].cloneNode(true);
+						allElems.splice(random, 1);
+						ret[ret.length] = randEl;
+					}
+					return ret; 
+				})(), l = elems.length;
+
+				while (l--) {
+					elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
+					elems[l].parentNode.removeChild(elems[l]);
+				}
+			}
+ 
+ 
+			// Usage:
 			var articleShape = ["vert-rect", "small-square", "horz-rect", "large-square"];
 			var article = document.querySelectorAll("article");
 			
 			for (i=0;i<article.length;i++){
 				article[i].className = random_item(articleShape);
 			}
+			
+			shuffle(article);
 		</script>
 	</body>
 </html>
