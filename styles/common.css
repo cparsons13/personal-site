@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /* CSS Document */
 
-@import url("base/css-reset.css");
-@import url("base/border-box.css");
-@import url("base/typography.css");
+@import url("{{site.baseurl}}/base/css-reset.css");
+@import url("{{site.baseurl}}/base/border-box.css");
+@import url("{{site.baseurl}}/base/typography.css");
 
-@import url("components/article.css");
+@import url("{{site.baseurl}}/components/article.css");
 
-@import url("layout/header.css");
-@import url("layout/primary-navigation.css");
-@import url("layout/secondary-navigation.css");
-@import url("layout/hero.css");
-@import url("layout/footer.css");
-@import url("layout/cv.css");
-@import url("layout/project-content.css");
-@import url("layout/forms.css");
-@import url("layout/home-content.css");
-@import url("layout/post-content.css");
-@import url("layout/blog.css");
+@import url("{{site.baseurl}}/layout/header.css");
+@import url("{{site.baseurl}}/layout/primary-navigation.css");
+@import url("{{site.baseurl}}/layout/secondary-navigation.css");
+@import url("{{site.baseurl}}/layout/hero.css");
+@import url("{{site.baseurl}}/layout/footer.css");
+@import url("{{site.baseurl}}/layout/cv.css");
+@import url("{{site.baseurl}}/layout/project-content.css");
+@import url("{{site.baseurl}}/layout/forms.css");
+@import url("{{site.baseurl}}/layout/home-content.css");
+@import url("{{site.baseurl}}/layout/post-content.css");
+@import url("{{site.baseurl}}/layout/blog.css");
